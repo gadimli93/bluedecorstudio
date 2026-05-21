@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { PageShell, PageHero } from "@/components/PageShell";
-import about from "@/assets/about.jpg";
+
 
 export const Route = createFileRoute("/about")({
   head: () => ({
@@ -26,27 +26,21 @@ function About() {
       <PageHero eyebrow="The Studio" title="About Blue Decor" />
 
       <section className="px-6 pb-24">
-        <div className="mx-auto max-w-6xl grid md:grid-cols-12 gap-12 items-start">
-          <div className="md:col-span-5">
-            <img src={about} alt="Camille Auclair, founder of Blue Decor" loading="lazy" width={1200} height={1500}
-              className="w-full aspect-[4/5] object-cover" />
-          </div>
-          <div className="md:col-span-7 md:pt-12">
-            <p className="text-2xl md:text-3xl font-display leading-snug">
-              Blue Decor was founded in 2014 by <span className="text-gold">Camille Auclair</span>,
-              following a decade between architectural practices in Paris and Manhattan.
+        <div className="mx-auto max-w-3xl">
+          <p className="text-2xl md:text-3xl font-display leading-snug">
+            Blue Decor was founded in 2014 by <span className="text-gold">Cagri Buyukkaya</span>,
+            following a decade between architectural practices in Paris and Manhattan.
+          </p>
+          <div className="mt-8 space-y-4 text-muted-foreground leading-relaxed">
+            <p>
+              The studio is intentionally small — six designers, one founder, one project manager —
+              so that each commission receives uncommon care. We do not chase scale; we chase depth.
             </p>
-            <div className="mt-8 space-y-4 text-muted-foreground leading-relaxed">
-              <p>
-                The studio is intentionally small — six designers, one founder, one project manager —
-                so that each commission receives uncommon care. We do not chase scale; we chase depth.
-              </p>
-              <p>
-                Our work has been recognised by Architectural Digest, AD France, and World of Interiors,
-                though the recognition we value most comes from clients who, years later, still write
-                to tell us how their home has held up.
-              </p>
-            </div>
+            <p>
+              Our work has been recognised by Architectural Digest, AD France, and World of Interiors,
+              though the recognition we value most comes from clients who, years later, still write
+              to tell us how their home has held up.
+            </p>
           </div>
         </div>
       </section>
