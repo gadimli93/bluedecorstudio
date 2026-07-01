@@ -6,9 +6,9 @@ export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
       { title: "About — Blue Decor" },
-      { name: "description", content: "Blue Decor is a small, deliberately slow interior design studio led by founder Camille Auclair." },
+      { name: "description", content: "Blue Decor is a focused interior design studio led by founder Cagri Buyukkaya." },
       { property: "og:title", content: "About — Blue Decor" },
-      { property: "og:description", content: "A small, deliberately slow interior design studio." },
+      { property: "og:description", content: "A focused interior design studio." },
     ],
   }),
   component: About,
@@ -16,8 +16,8 @@ export const Route = createFileRoute("/about")({
 
 const principles = [
   { t: "Restraint", d: "We subtract before we add. Negative space is a material we use deliberately." },
-  { t: "Craft", d: "Every piece is sourced, commissioned, or made by hands we know personally." },
-  { t: "Patience", d: "We accept a small number of commissions each year and refuse to rush them." },
+  { t: "Craft", d: "Every piece is sourced, commissioned, or made by hands we know and trust." },
+  { t: "Patience", d: "We give each commission the time it needs to reach clarity, refinement, and a resolved material expression." },
 ];
 
 function About() {
@@ -28,18 +28,15 @@ function About() {
       <section className="px-6 pb-24">
         <div className="mx-auto max-w-3xl">
           <p className="text-2xl md:text-3xl font-display leading-snug">
-            Blue Decor was founded in 2014 by <span className="text-gold">Cagri Buyukkaya</span>,
-            following a decade between architectural practices in Paris and Manhattan.
+            Blue Decor was founded in 2019 by <span className="text-gold">Cagri Buyukkaya</span>,
+            following a decade between architectural practices in Istanbul, Brisbane and London.
           </p>
           <div className="mt-8 space-y-4 text-muted-foreground leading-relaxed">
             <p>
-              The studio is intentionally small — six designers, one founder, one project manager —
-              so that each commission receives uncommon care. We do not chase scale; we chase depth.
+              The studio operates as an intentionally focused team — two designers, a founder, and a project manager —
+              allowing each commission to be handled with exceptional attention.
             </p>
             <p>
-              Our work has been recognised by Architectural Digest, AD France, and World of Interiors,
-              though the recognition we value most comes from clients who, years later, still write
-              to tell us how their home has held up.
             </p>
           </div>
         </div>
