@@ -6,7 +6,7 @@ export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
       { title: "Contact — Blue Decor" },
-      { name: "description", content: "Begin a project with Blue Decor. We respond to every inquiry personally within three business days." },
+      { name: "description", content: "Begin a project with Blue Decor. We respond to every inquiry personally within two business days." },
       { property: "og:title", content: "Contact — Blue Decor" },
       { property: "og:description", content: "Begin a project with Blue Decor." },
     ],
@@ -21,7 +21,7 @@ function Contact() {
       <PageHero
         eyebrow="Inquiries"
         title="Let's begin"
-        subtitle="Tell us a little about your project. We reply personally within three business days."
+        subtitle="Tell us a little about your project. We reply personally within two business days."
       />
 
       <section className="px-6 pb-32">
@@ -30,19 +30,19 @@ function Contact() {
             <div>
               <h3 className="text-xs uppercase tracking-[0.25em] text-gold mb-3">Studio</h3>
               <p className="text-sm text-muted-foreground leading-relaxed">
-                428 Greenwich Street, Floor 4<br />New York, NY 10013
+                LONDON
               </p>
             </div>
             <div>
               <h3 className="text-xs uppercase tracking-[0.25em] text-gold mb-3">Direct</h3>
               <p className="text-sm text-muted-foreground leading-relaxed">
-                hello@bluedecor.studio<br />+1 (212) 555 0142
+                info@bluedecor.co.uk<br />+44 7 767 137665
               </p>
             </div>
             <div>
               <h3 className="text-xs uppercase tracking-[0.25em] text-gold mb-3">Hours</h3>
               <p className="text-sm text-muted-foreground leading-relaxed">
-                Tuesday – Friday<br />By appointment only
+                Monday – Friday<br />By appointment only
               </p>
             </div>
           </div>
@@ -52,7 +52,7 @@ function Contact() {
               <div className="border border-gold/40 p-12 text-center">
                 <h3 className="text-3xl font-display text-gold">Thank you.</h3>
                 <p className="mt-4 text-muted-foreground">
-                  Your message is with us. We'll respond within three business days.
+                  Your message is with us. We'll respond within two business days.
                 </p>
               </div>
             ) : (
