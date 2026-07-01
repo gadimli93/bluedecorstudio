@@ -19,11 +19,11 @@ export const Route = createFileRoute("/portfolio")({
 });
 
 const projects = [
-  { img: hero, title: "Salon Vermeil", place: "Manhattan", year: "2025", type: "Residential" },
-  { img: p1, title: "Chambord Residence", place: "Upper East Side", year: "2024", type: "Residential" },
-  { img: p2, title: "Maison Étoile", place: "Paris 7ᵉ", year: "2024", type: "Pied-à-terre" },
-  { img: p3, title: "Harbor Pied-à-Terre", place: "Tribeca", year: "2023", type: "Residential" },
-  { img: p4, title: "Linwood Library", place: "Hudson Valley", year: "2023", type: "Private Study" },
+  { img: hero, title: "Salon Vermeil", place: "London", year: "2025", type: "Residential" },
+  { img: p1, title: "Chambord Residence", place: "London", year: "2020", type: "RESIDENTIAL" },
+  { img: p2, title: "Maison Étoile", place: "London", year: "2024", type: "Pied-à-terre" },
+  { img: p3, title: "Harbor Pied-à-Terre", place: "London", year: "2023", type: "Residential" },
+  { img: p4, title: "Linwood Library", place: "London", year: "2023", type: "Private Study" },
 ];
 
 function Portfolio() {
