@@ -32,8 +32,8 @@ export function SiteFooter() {
         <div>
           <h4 className="text-xs uppercase tracking-[0.25em] text-gold mb-4">Contact</h4>
           <ul className="space-y-2 text-sm text-muted-foreground">
-            <li>hello@bluedecor.studio</li>
-            <li>+1 (212) 555 0142</li>
+            <li>info@bluedecor.co.uk</li>
+            <li>+44 7 767 137665</li>
             <li>By appointment only</li>
           </ul>
         </div>

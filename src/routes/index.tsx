@@ -26,10 +26,10 @@ const services = [
 ];
 
 const projects = [
-  { img: p1, title: "Chambord Residence", place: "Upper East Side" },
-  { img: p2, title: "Maison Étoile", place: "Paris 7ᵉ" },
-  { img: p3, title: "Harbor Pied-à-Terre", place: "Tribeca" },
-  { img: p4, title: "Linwood Library", place: "Hudson Valley" },
+  { img: p1, title: "Chambord Residence", place: "LONDON" },
+  { img: p2, title: "Maison Étoile", place: "LONDON" },
+  { img: p3, title: "Harbor Pied-à-Terre", place: "LONDON" },
+  { img: p4, title: "Linwood Library", place: "LONDON" },
 ];
 
 function Index() {
@@ -42,7 +42,7 @@ function Index() {
         <div className="relative h-full flex items-center">
           <div className="mx-auto max-w-7xl px-6 w-full">
             <div className="max-w-3xl animate-fade-up">
-              <span className="gold-rule">Est. 2014 · New York</span>
+              <span className="gold-rule">EST. 2019 · LONDON</span>
               <h1 className="mt-8 text-6xl md:text-8xl font-display leading-[0.95] text-foreground">
                 Interiors of <em className="text-gold not-italic font-display italic">quiet</em> consequence.
               </h1>
@@ -75,9 +75,9 @@ function Index() {
               and the life unfolding within.
             </p>
             <p className="mt-8 text-muted-foreground leading-relaxed max-w-2xl">
-              Our process is slow by design. We work with a deliberately small number of clients
-              each year, granting every project the time required for restraint, craft, and material
-              integrity to emerge.
+              We approach each project with measured care and dedicated attention from concept
+              to completion, creating space for precision, thoughtful refinement, and a material
+              identity tailored to its character.
             </p>
           </div>
         </div>
@@ -140,8 +140,8 @@ function Index() {
             Begin with a <em className="text-gold not-italic italic">conversation</em>.
           </h2>
           <p className="mt-6 text-muted-foreground leading-relaxed">
-            We accept a limited number of new commissions each season. Tell us about your
-            project — we respond personally within three business days.
+            We review new commissions seasonally. Tell us about your project — we respond
+            personally within two business days.
           </p>
           <div className="mt-10">
             <Link to="/contact" className="btn-gold">Book a Consultation</Link>
