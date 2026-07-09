@@ -16,6 +16,31 @@ export const Route = createFileRoute("/contact")({
 
 function Contact() {
   const [sent, setSent] = useState(false);
+  const [loading, setLoading] = useState(false);
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setLoading(true);
+
+    try {
+      const formData = new FormData(e.currentTarget);
+      const response = await fetch("https://formsubmit.co/info@bluedecor.co.uk", {
+        method: "POST",
+        body: formData,
+      });
+
+      if (response.ok) {
+        setSent(true);
+      } else {
+        alert("Error sending message. Please try again or email info@bluedecor.co.uk");
+      }
+    } catch (error) {
+      alert("Error sending message. Please try again or email info@bluedecor.co.uk");
+    } finally {
+      setLoading(false);
+    }
+  };
+
   return (
     <PageShell>
       <PageHero
@@ -57,7 +82,7 @@ function Contact() {
               </div>
             ) : (
               <form
-                onSubmit={(e) => { e.preventDefault(); setSent(true); }}
+                onSubmit={handleSubmit}
                 className="space-y-8"
               >
                 <div className="grid sm:grid-cols-2 gap-8">
@@ -78,7 +103,9 @@ function Contact() {
                     className="w-full bg-transparent border-b border-border focus:border-gold outline-none py-3 text-foreground resize-none transition-colors"
                   />
                 </div>
-                <button type="submit" className="btn-gold">Send Inquiry</button>
+                <button type="submit" disabled={loading} className="btn-gold disabled:opacity-50 disabled:cursor-not-allowed">
+                  {loading ? "Sending..." : "Send Inquiry"}
+                </button>
               </form>
             )}
           </div>
