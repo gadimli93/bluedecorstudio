@@ -24,7 +24,12 @@ function Contact() {
 
     try {
       const formData = new FormData(e.currentTarget);
-      const response = await fetch("https://formsubmit.co/info@bluedecor.co.uk", {
+      // Disable captcha for FormSubmit
+      formData.append("_captcha", "false");
+      // Redirect back to contact page after submission
+      formData.append("_next", window.location.href);
+
+      const response = await fetch("https://formsubmit.co/ajax/info@bluedecor.co.uk", {
         method: "POST",
         body: formData,
       });
@@ -32,10 +37,10 @@ function Contact() {
       if (response.ok) {
         setSent(true);
       } else {
-        alert("Error sending message. Please try again or email info@bluedecor.co.uk");
+        throw new Error("Form submission failed");
       }
     } catch (error) {
-      alert("Error sending message. Please try again or email info@bluedecor.co.uk");
+      alert("Error sending message. Please try again or email info@bluedecor.co.uk directly.");
     } finally {
       setLoading(false);
     }
