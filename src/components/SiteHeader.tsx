@@ -1,7 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { useState } from "react";
-import logoAsset from "@/assets/logo-initials.png.asset.json";
-const logo = logoAsset.url;
+import logo from "@/assets/logo-initials.png";
 import { Menu, X } from "lucide-react";
 
 const nav = [
