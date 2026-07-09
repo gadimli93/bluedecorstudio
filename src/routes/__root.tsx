@@ -5,7 +5,6 @@ import {
   createRootRouteWithContext,
   useRouter,
   HeadContent,
-  Scripts,
 } from "@tanstack/react-router";
 
 import appCss from "../styles.css?url";
@@ -56,7 +55,7 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
             Try again
           </button>
           <a
-            href="/"
+            href="/bluedecorstudio/"
             className="inline-flex items-center justify-center rounded-md border border-input bg-background px-4 py-2 text-sm font-medium text-foreground transition-colors hover:bg-accent"
           >
             Go home
@@ -73,51 +72,62 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { title: "Blue Decor — Bespoke Interior Design" },
-      { name: "description", content: "Blue Decor is a bespoke interior design studio crafting timeless residential and hospitality interiors." },
+      {
+        name: "description",
+        content:
+          "Blue Decor is a bespoke interior design studio crafting timeless residential and hospitality interiors.",
+      },
       { name: "author", content: "Blue Decor" },
       { property: "og:title", content: "Blue Decor — Bespoke Interior Design" },
-      { property: "og:description", content: "Blue Decor is a bespoke interior design studio crafting timeless residential and hospitality interiors." },
+      {
+        property: "og:description",
+        content:
+          "Blue Decor is a bespoke interior design studio crafting timeless residential and hospitality interiors.",
+      },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
       { name: "twitter:site", content: "@Lovable" },
       { name: "twitter:title", content: "Blue Decor — Bespoke Interior Design" },
-      { name: "twitter:description", content: "Blue Decor is a bespoke interior design studio crafting timeless residential and hospitality interiors." },
-      { property: "og:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/attachments/og-images/66a0c51c-4a64-40d3-95b4-aa67128a70eb" },
-      { name: "twitter:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/attachments/og-images/66a0c51c-4a64-40d3-95b4-aa67128a70eb" },
+      {
+        name: "twitter:description",
+        content:
+          "Blue Decor is a bespoke interior design studio crafting timeless residential and hospitality interiors.",
+      },
+      {
+        property: "og:image",
+        content:
+          "https://storage.googleapis.com/gpt-engineer-file-uploads/attachments/og-images/66a0c51c-4a64-40d3-95b4-aa67128a70eb",
+      },
+      {
+        name: "twitter:image",
+        content:
+          "https://storage.googleapis.com/gpt-engineer-file-uploads/attachments/og-images/66a0c51c-4a64-40d3-95b4-aa67128a70eb",
+      },
     ],
     links: [
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
-      { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,400&family=Inter:wght@300;400;500&display=swap" },
+      {
+        rel: "stylesheet",
+        href: "https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,400&family=Inter:wght@300;400;500&display=swap",
+      },
       { rel: "stylesheet", href: appCss },
     ],
   }),
-  shellComponent: RootShell,
   component: RootComponent,
   notFoundComponent: NotFoundComponent,
   errorComponent: ErrorComponent,
 });
-
-function RootShell({ children }: { children: React.ReactNode }) {
-  return (
-    <html lang="en">
-      <head>
-        <HeadContent />
-      </head>
-      <body>
-        {children}
-        <Scripts />
-      </body>
-    </html>
-  );
-}
 
 function RootComponent() {
   const { queryClient } = Route.useRouteContext();
 
   return (
     <QueryClientProvider client={queryClient}>
-      <Outlet />
+      <div className="min-h-screen bg-background">
+        <HeadContent />
+        <Outlet />
+      </div>
     </QueryClientProvider>
   );
 }

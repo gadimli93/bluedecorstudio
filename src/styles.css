@@ -86,21 +86,38 @@
     font-feature-settings: "ss01", "cv01";
     -webkit-font-smoothing: antialiased;
   }
-  h1, h2, h3, h4 {
+  h1,
+  h2,
+  h3,
+  h4 {
     font-family: var(--font-display);
     font-weight: 400;
     letter-spacing: -0.01em;
   }
-  .font-display { font-family: var(--font-display); }
-  .tracking-wider-xl { letter-spacing: 0.3em; }
+  .font-display {
+    font-family: var(--font-display);
+  }
+  .tracking-wider-xl {
+    letter-spacing: 0.3em;
+  }
 }
 
 @layer utilities {
-  .text-gold { color: var(--gold); }
-  .bg-gold { background-color: var(--gold); }
-  .border-gold { border-color: var(--gold); }
-  .bg-navy-deep { background-color: var(--navy-deep); }
-  .bg-navy { background-color: var(--navy); }
+  .text-gold {
+    color: var(--gold);
+  }
+  .bg-gold {
+    background-color: var(--gold);
+  }
+  .border-gold {
+    border-color: var(--gold);
+  }
+  .bg-navy-deep {
+    background-color: var(--navy-deep);
+  }
+  .bg-navy {
+    background-color: var(--navy);
+  }
 
   .gold-rule {
     display: inline-flex;
@@ -111,7 +128,8 @@
     font-size: 0.7rem;
     letter-spacing: 0.35em;
   }
-  .gold-rule::before, .gold-rule::after {
+  .gold-rule::before,
+  .gold-rule::after {
     content: "";
     width: 2.5rem;
     height: 1px;
@@ -157,8 +175,16 @@
   }
 
   @keyframes fadeUp {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
-  .animate-fade-up { animation: fadeUp 1s ease forwards; }
+  .animate-fade-up {
+    animation: fadeUp 1s ease forwards;
+  }
 }

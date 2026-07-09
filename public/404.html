@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Blue Decor</title>
+    <script>
+      const basePath = "/bluedecorstudio/";
+      const route = window.location.pathname.replace(/^\/bluedecorstudio/, "") || "/";
+      const redirectPath = route === "/" ? basePath : `${basePath}#${route}`;
+      window.location.replace(redirectPath);
+    </script>
+  </head>
+  <body></body>
+</html>
