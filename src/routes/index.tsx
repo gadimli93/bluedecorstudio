@@ -1,10 +1,10 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { PageShell } from "@/components/PageShell";
 import hero from "@/assets/hero.jpg";
-import p1 from "@/assets/project-1.jpg";
-import p2 from "@/assets/project-2.jpg";
-import p3 from "@/assets/project-3.jpg";
-import p4 from "@/assets/project-4.jpg";
+import p1 from "@/assets/livingroom/1_living-room-butterfly_r.png";
+import p2 from "@/assets/bedroom/21_bedroom-modern-contemporary-3r.jpg";
+import p3 from "@/assets/kitchen/4_modern-open-plan kitchen-3.jpeg";
+import p4 from "@/assets/bathroom/1_contemporary-minimalist-bathroom-1.png";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -26,10 +26,10 @@ const services = [
 ];
 
 const projects = [
-  { img: p1, title: "Chambord Residence", place: "LONDON" },
-  { img: p2, title: "Maison Étoile", place: "LONDON" },
-  { img: p3, title: "Harbor Pied-à-Terre", place: "LONDON" },
-  { img: p4, title: "Linwood Library", place: "LONDON" },
+  { img: p1, title: "Modern Classic Luxury Living Room", place: "LONDON" },
+  { img: p2, title: "Modern Contemporary Bedroom", place: "LONDON" },
+  { img: p3, title: "Modern Luxury Open‑Concept Kitchen", place: "LONDON" },
+  { img: p4, title: "Contemporary Minimalist Bathroom", place: "LONDON" },
 ];
 
 function Index() {

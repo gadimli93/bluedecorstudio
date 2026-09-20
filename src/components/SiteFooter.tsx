@@ -1,4 +1,5 @@
 import { Link } from "@tanstack/react-router";
+import { Instagram } from "lucide-react";
 import logo from "@/assets/logo-initials.png";
 
 export function SiteFooter() {
@@ -10,7 +11,9 @@ export function SiteFooter() {
             <img src={logo} alt="Blue Decor" className="h-12 w-12 object-cover rounded-sm" />
             <div>
               <div className="font-display text-xl text-gold">Blue Decor</div>
-              <div className="text-[10px] tracking-wider-xl text-muted-foreground uppercase">Interior Design</div>
+              <div className="text-[10px] tracking-wider-xl text-muted-foreground uppercase">
+                Interior Design
+              </div>
             </div>
           </div>
           <p className="text-sm text-muted-foreground max-w-md leading-relaxed">
@@ -22,10 +25,26 @@ export function SiteFooter() {
         <div>
           <h4 className="text-xs uppercase tracking-[0.25em] text-gold mb-4">Studio</h4>
           <ul className="space-y-2 text-sm text-muted-foreground">
-            <li><Link to="/about" className="hover:text-gold">About</Link></li>
-            <li><Link to="/services" className="hover:text-gold">Services</Link></li>
-            <li><Link to="/portfolio" className="hover:text-gold">Portfolio</Link></li>
-            <li><Link to="/contact" className="hover:text-gold">Contact</Link></li>
+            <li>
+              <Link to="/about" className="hover:text-gold">
+                About
+              </Link>
+            </li>
+            <li>
+              <Link to="/services" className="hover:text-gold">
+                Services
+              </Link>
+            </li>
+            <li>
+              <Link to="/portfolio" className="hover:text-gold">
+                Portfolio
+              </Link>
+            </li>
+            <li>
+              <Link to="/contact" className="hover:text-gold">
+                Contact
+              </Link>
+            </li>
           </ul>
         </div>
 
@@ -35,6 +54,17 @@ export function SiteFooter() {
             <li>info@bluedecor.co.uk</li>
             <li>+44 7 767 137665</li>
             <li>By appointment only</li>
+            <li>
+              <a
+                href="https://instagram.com/bluedecoruk"
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center gap-2 transition-colors hover:text-gold"
+              >
+                <Instagram size={15} strokeWidth={1.5} aria-hidden="true" />
+                <span>bluedecoruk</span>
+              </a>
+            </li>
           </ul>
         </div>
       </div>
