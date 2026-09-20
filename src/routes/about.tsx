@@ -1,12 +1,14 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { PageShell, PageHero } from "@/components/PageShell";
 
-
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
       { title: "About — Blue Decor" },
-      { name: "description", content: "Blue Decor is a focused interior design studio led by founder Cagri Buyukkaya." },
+      {
+        name: "description",
+        content: "Blue Decor is a focused interior design studio led by founder Cagri Buyukkaya.",
+      },
       { property: "og:title", content: "About — Blue Decor" },
       { property: "og:description", content: "A focused interior design studio." },
     ],
@@ -15,9 +17,15 @@ export const Route = createFileRoute("/about")({
 });
 
 const principles = [
-  { t: "Restraint", d: "We subtract before we add. Negative space is a material we use deliberately." },
+  {
+    t: "Restraint",
+    d: "We subtract before we add. Negative space is a material we use deliberately.",
+  },
   { t: "Craft", d: "Every piece is sourced, commissioned, or made by hands we know and trust." },
-  { t: "Patience", d: "We give each commission the time it needs to reach clarity, refinement, and a resolved material expression." },
+  {
+    t: "Patience",
+    d: "We give each commission the time it needs to reach clarity, refinement, and a resolved material expression.",
+  },
 ];
 
 function About() {
@@ -28,16 +36,19 @@ function About() {
       <section className="px-6 pb-24">
         <div className="mx-auto max-w-3xl">
           <p className="text-2xl md:text-3xl font-display leading-snug">
-            Blue Decor was founded in 2019 by <span className="text-gold">Cagri Buyukkaya</span>,
-            following a decade between architectural practices in Istanbul, Brisbane and London.
+            Blue Decor was established in 2019 by <span className="text-gold">Cagri Buyukkaya</span>
+            , bringing together over <span className="text-gold">20 years of experience</span> in
+            architecture, interior design, and engineering across Istanbul, Brisbane, and London.
           </p>
           <div className="mt-8 space-y-4 text-muted-foreground leading-relaxed">
             <p>
-              The studio operates as an intentionally focused team — two designers, a founder, and a project manager —
-              allowing each commission to be handled with exceptional attention.
+              The studio operates as an intentionally focused team, with our founder leading the
+              design process alongside a dedicated project manager. We work with clients nationwide
+              and collaborate with a network of bespoke and well-established brands. Every project
+              is crafted with the client's vision at its core and delivered with exceptional
+              attention to detail.
             </p>
-            <p>
-            </p>
+            <p></p>
           </div>
         </div>
       </section>
@@ -63,7 +74,9 @@ function About() {
       <section className="py-32 px-6 border-t border-border">
         <div className="mx-auto max-w-3xl text-center">
           <h2 className="text-4xl md:text-5xl font-display">Work with the studio</h2>
-          <Link to="/contact" className="btn-gold mt-10">Begin a Project</Link>
+          <Link to="/contact" className="btn-gold mt-10">
+            Begin a Project
+          </Link>
         </div>
       </section>
     </PageShell>

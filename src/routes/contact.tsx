@@ -6,7 +6,11 @@ export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
       { title: "Contact — Blue Decor" },
-      { name: "description", content: "Begin a project with Blue Decor. We respond to every inquiry personally within two business days." },
+      {
+        name: "description",
+        content:
+          "Begin a project with Blue Decor. We respond to every inquiry personally within two business days.",
+      },
       { property: "og:title", content: "Contact — Blue Decor" },
       { property: "og:description", content: "Begin a project with Blue Decor." },
     ],
@@ -59,20 +63,22 @@ function Contact() {
           <div className="md:col-span-4 space-y-10">
             <div>
               <h3 className="text-xs uppercase tracking-[0.25em] text-gold mb-3">Studio</h3>
-              <p className="text-sm text-muted-foreground leading-relaxed">
-                LONDON
-              </p>
+              <p className="text-sm text-muted-foreground leading-relaxed">LONDON</p>
             </div>
             <div>
               <h3 className="text-xs uppercase tracking-[0.25em] text-gold mb-3">Direct</h3>
               <p className="text-sm text-muted-foreground leading-relaxed">
-                info@bluedecor.co.uk<br />+44 7 767 137665
+                info@bluedecor.co.uk
+                <br />
+                +44 7 767 137665
               </p>
             </div>
             <div>
               <h3 className="text-xs uppercase tracking-[0.25em] text-gold mb-3">Hours</h3>
               <p className="text-sm text-muted-foreground leading-relaxed">
-                Monday – Friday<br />By appointment only
+                Monday – Friday
+                <br />
+                By appointment only
               </p>
             </div>
           </div>
@@ -86,10 +92,7 @@ function Contact() {
                 </p>
               </div>
             ) : (
-              <form
-                onSubmit={handleSubmit}
-                className="space-y-8"
-              >
+              <form onSubmit={handleSubmit} className="space-y-8">
                 <div className="grid sm:grid-cols-2 gap-8">
                   <Field label="Name" name="name" required />
                   <Field label="Email" name="email" type="email" required />
@@ -98,9 +101,15 @@ function Contact() {
                   <Field label="Phone" name="phone" />
                   <Field label="Location" name="location" placeholder="City, neighbourhood" />
                 </div>
-                <Field label="Project Type" name="type" placeholder="Residence, pied-à-terre, hospitality…" />
+                <Field
+                  label="Project Type"
+                  name="type"
+                  placeholder="Residence, Extension, Hospitality…"
+                />
                 <div>
-                  <label className="block text-[10px] tracking-[0.3em] uppercase text-gold mb-3">Tell us about your project</label>
+                  <label className="block text-[10px] tracking-[0.3em] uppercase text-gold mb-3">
+                    Tell us about your project
+                  </label>
                   <textarea
                     name="message"
                     rows={6}
@@ -108,7 +117,11 @@ function Contact() {
                     className="w-full bg-transparent border-b border-border focus:border-gold outline-none py-3 text-foreground resize-none transition-colors"
                   />
                 </div>
-                <button type="submit" disabled={loading} className="btn-gold disabled:opacity-50 disabled:cursor-not-allowed">
+                <button
+                  type="submit"
+                  disabled={loading}
+                  className="btn-gold disabled:opacity-50 disabled:cursor-not-allowed"
+                >
                   {loading ? "Sending..." : "Send Inquiry"}
                 </button>
               </form>
@@ -120,8 +133,18 @@ function Contact() {
   );
 }
 
-function Field({ label, name, type = "text", required, placeholder }: {
-  label: string; name: string; type?: string; required?: boolean; placeholder?: string;
+function Field({
+  label,
+  name,
+  type = "text",
+  required,
+  placeholder,
+}: {
+  label: string;
+  name: string;
+  type?: string;
+  required?: boolean;
+  placeholder?: string;
 }) {
   return (
     <div>
